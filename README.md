@@ -11,7 +11,7 @@ Power BI ile İstanbul’un 39 ilçesinde mobil internet performansının ilçe,
 
 ## Kullanım
 
-`111_analiz.pbix` dosyasını indirip Microsoft Power BI Desktop ile açın. GitHub PBIX raporunu doğrudan görüntülemez. Yenileme için kaynak CSV dosyasının yolunun kendi bilgisayarınıza göre düzenlenmesi gerekebilir.
+`istanbul_mobil_internet_analizi.pbix` dosyasını indirip Microsoft Power BI Desktop ile açın. GitHub PBIX raporunu doğrudan görüntülemez. Yenileme için kaynak CSV dosyasının yolunun kendi bilgisayarınıza göre düzenlenmesi gerekebilir.
 
 ## Veri modeli
 
