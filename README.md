@@ -1,5 +1,9 @@
 # İstanbul’da Mobil İnternet Performansı
 
+![İstanbul mobil internet performansı raporu](assets/rapor_onizleme.png)
+
+[PDF raporunu görüntüle](istanbul_mobil_internet_analizi.pdf) · [Power BI dosyasını indir](istanbul_mobil_internet_analizi.pbix)
+
 Power BI ile İstanbul’un 39 ilçesinde mobil internet performansının ilçe, yaka ve dönem bazında incelenmesi.
 
 ## Kapsam
