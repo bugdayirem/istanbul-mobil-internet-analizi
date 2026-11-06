@@ -31,3 +31,7 @@ Power BI ile İstanbul’un 39 ilçesinde mobil internet performansının ilçe,
 - [İstanbul ilçe sınırları](https://github.com/sahircansurmeli/istanbul-geojson): © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), ODbL 1.0.
 
 Bu proje bağımsız bir öğrenci çalışmasıdır.
+
+## Semt Sinyal web uygulaması
+
+İki ilçenin internet sonuçlarını, 2025 nüfuslarını ve açıklamalı karşılaştırmayı telefon görünümünde inceleyen web prototipi eklendi. [Uygulama dosyaları ve çalıştırma yönergeleri](semt-sinyal/README.md).
