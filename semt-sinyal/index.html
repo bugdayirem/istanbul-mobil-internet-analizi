@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semt Sinyal — İstanbul İlçe Karşılaştırması</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="./">Semt Sinyal<span>●</span></a>
+    <span>İstanbul · Mobil internet karşılaştırması</span>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">İSTANBUL’U VERİYLE KEŞFET</p>
+      <h1>İki ilçe.<br>Bir karşılaştırma.</h1>
+      <p>
+        İlçelerin nüfusunu ve mobil internet sonuçlarını
+        yan yana incele.
+      </p>
+    </section>
+
+    <section class="workspace" aria-label="İlçe karşılaştırması">
+      <div class="selection-panel">
+        <h2>Nereyi karşılaştıralım?</h2>
+
+        <label for="district-a">Birinci ilçe</label>
+        <select id="district-a">
+          <option value="">İlçe seç</option>
+        </select>
+
+        <label for="district-b">İkinci ilçe</label>
+        <select id="district-b">
+          <option value="">İlçe seç</option>
+        </select>
+
+        <label for="period">İnternet verisinin dönemi</label>
+        <select id="period">
+          <option value="">Dönem seç</option>
+        </select>
+
+        <button id="compare-button" type="button" disabled>
+          İlçeleri karşılaştır
+        </button>
+
+        <p class="data-note">
+          İlçe düzeyindeki sonuçlar, belirli bir evdeki
+          bağlantı kalitesini garanti etmez.
+        </p>
+      </div>
+
+      <div class="phone">
+        <div class="phone-notch" aria-hidden="true"></div>
+
+        <div class="phone-screen">
+          <p class="phone-brand">Semt Sinyal ●</p>
+          <h2>İlçelerin bağlantı karnesi</h2>
+
+          <div id="comparison-result" aria-live="polite">
+            <p class="empty-state">
+              Karşılaştırma için iki ilçe ve bir dönem seç.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>Veri kaynakları ve yöntem</strong></p>
+      <p>Mobil internet: Ookla açık verilerinden türetilen Power BI ilçe–dönem özeti. Veriler canlı değildir ve operatör ayrımı içermez. Test sayısı nüfus veya abone sayısı değildir.</p>
+      <p>Kaynak: <a href="https://github.com/teamookla/ookla-open-data">Speedtest by Ookla Open Data</a>. Türetilmiş mobil internet verileri: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+      <p>Nüfus: TÜİK, 2025 — <a href="https://veriistanbul.ito.org.tr/view/kategori/veri.php?Guid=89c6a94b-181a-46ea-a62a-c404ebfe8272">İTO Veri İstanbul</a>. İnternet döneminden bağımsız olarak 2025 nüfusu gösterilir.</p>
+      <p>Öneriler indirme, yükleme ve gecikme değerlerini karşılaştırır. Nüfus öneriye dahil edilmez. Sonuçlar adres bazında bağlantı garantisi vermez. Gecikme etiketleri açıklayıcı proje eşikleridir; resmî kalite sınıfları değildir.</p>
+    </footer>
+  </main>
+</body>
+</html>
