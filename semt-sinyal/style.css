@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --background: #faf7f4;
+  --surface: #ffffff;
+  --text: #332637;
+  --muted: #786d7b;
+  --accent: #a44270;
+  --border: #e9dfe5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+}
+
+.header {
+  max-width: 1200px;
+  margin: auto;
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--accent);
+  margin-left: 8px;
+}
+
+.header > span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 48px 32px 24px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 16px 0;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.08;
+  letter-spacing: -3px;
+}
+
+.intro > p:last-child {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  align-items: start;
+  gap: 80px;
+  margin-top: 44px;
+}
+
+.selection-panel {
+  padding: 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+}
+
+.selection-panel h2 {
+  margin: 0 0 28px;
+  font-size: 23px;
+}
+
+label {
+  display: block;
+  margin: 22px 0 9px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+select {
+  width: 100%;
+  padding: 14px 12px;
+  background: var(--background);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font: inherit;
+}
+
+select:focus-visible,
+button:focus-visible {
+  outline: 3px solid #dba5c0;
+  outline-offset: 3px;
+}
+
+button {
+  width: 100%;
+  margin-top: 28px;
+  padding: 16px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--accent);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #853359;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.data-note {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.phone {
+  position: relative;
+  width: 100%;
+  padding: 11px;
+  background: #302932;
+  border-radius: 46px;
+  box-shadow: 0 24px 60px #49314320;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 108px;
+  height: 27px;
+  border-radius: 20px;
+  background: #302932;
+}
+
+.phone-screen {
+  min-height: 570px;
+  padding: 66px 23px 28px;
+  overflow: hidden;
+  border-radius: 36px;
+  background: #fffafc;
+}
+
+.phone-brand {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.phone-screen h2 {
+  font-size: 25px;
+  line-height: 1.3;
+}
+
+.empty-state {
+  margin-top: 42px;
+  padding: 24px;
+  background: #f2e8ee;
+  color: var(--muted);
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+footer {
+  margin-top: 50px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .header {
+    padding: 22px;
+  }
+
+  .header > span {
+    display: none;
+  }
+
+  main {
+    padding: 32px 22px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .selection-panel {
+    padding: 24px;
+  }
+
+  .phone {
+    max-width: 360px;
+    margin: auto;
+  }
+}
+.district-card {
+  margin-top: 20px;
+  padding: 18px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.district-card h3 {
+  margin: 0 0 12px;
+  color: var(--accent);
+}
+
+.district-card small {
+  display: block;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.metric {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.metric strong {
+  font-size: 13px;
+}
+
+.metric p {
+  margin: 6px 0;
+  font-size: 23px;
+  font-weight: 700;
+}
+.recommendation {
+  margin-top: 24px;
+  padding: 18px;
+  background: #f2e8ee;
+  border-radius: 16px;
+}
+
+.recommendation h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.recommendation p,
+.recommendation small {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.recommendation strong,
+.recommendation small {
+  display: block;
+  margin-top: 12px;
+}
