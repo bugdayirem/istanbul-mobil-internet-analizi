@@ -1,0 +1,8 @@
+{
+  "name": "semt-sinyal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/build-worker.py && bash scripts/build.sh"
+  }
+}

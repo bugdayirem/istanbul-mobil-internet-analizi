@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="512" height="512"
+     viewBox="0 0 512 512">
+
+  <!-- Arka plan -->
+  <rect width="512" height="512"
+        fill="#a44270"/>
+
+  <!-- Beyaz sinyal çubukları -->
+  <g fill="#ffffff">
+    <rect x="112" y="292"
+          width="64" height="108" rx="16"/>
+
+    <rect x="224" y="220"
+          width="64" height="180" rx="16"/>
+
+    <rect x="336" y="112"
+          width="64" height="288" rx="16"/>
+  </g>
+</svg>

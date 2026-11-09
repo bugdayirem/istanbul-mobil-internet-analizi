@@ -94,7 +94,7 @@ function createDistrictCard(record) {
     );
   }
 
-  // İndirme hızının kullanıcı için anlamı.
+  // İndirme hızının açıklaması.
   const downloadNote =
   "Video izleme, sayfa açma ve dosya indirme hızı. " +
   "Yüksek olması tercih edilir.";
@@ -140,18 +140,38 @@ function createDistrictCard(record) {
   return card;
 }
 
-function compareDistricts() {
-  const first = records.find(record =>
+async function compareDistricts() {
+  let first = records.find(record =>
     record.district === districtA.value &&
     record.period === periodSelect.value
   );
 
-  const second = records.find(record =>
+  let second = records.find(record =>
     record.district === districtB.value &&
     record.period === periodSelect.value
   );
 
+  // Canlı sitede karşılaştırmayı API'den iste; çevrimdışında yerel veriyi kullan.
+  let offline = false;
+  const selectedA = districtA.value;
+  const selectedB = districtB.value;
+  const selectedPeriod = periodSelect.value;
+  compareButton.disabled = true;
+  try {
+    const params = new URLSearchParams({districtA: selectedA, districtB: selectedB, period: selectedPeriod});
+    const response = await fetch('./api/compare?' + params);
+    if (!response.ok) throw new Error('API kullanılamıyor');
+    const comparison = await response.json();
+    first = comparison.first;
+    second = comparison.second;
+  } catch {
+    offline = true;
+  } finally {
+    checkSelections();
+  }
+  if (districtA.value !== selectedA || districtB.value !== selectedB || periodSelect.value !== selectedPeriod) return;
   result.replaceChildren();
+  addText(result, 'small', offline ? 'Kaydedilmiş veri ile karşılaştırma' : 'API üzerinden karşılaştırma');
 
   if (!first || !second) {
     addText(
@@ -270,7 +290,13 @@ result.appendChild(recommendation);
 
 async function loadData() {
   try {
-    const response = await fetch("./data.json");
+    let response;
+    try {
+      response = await fetch('./api/records');
+      if (!response.ok) throw new Error('Yerel veri kullanılacak');
+    } catch {
+      response = await fetch('./data.json');
+    }
 
     if (!response.ok) {
       throw new Error("Veri dosyası okunamadı.");
@@ -321,3 +347,12 @@ periodSelect.addEventListener("change", checkSelections);
 compareButton.addEventListener("click", compareDistricts);
 
 loadData();
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .catch(error => {
+        console.error("Çevrimdışı özellik başlatılamadı:", error);
+      });
+  });
+}

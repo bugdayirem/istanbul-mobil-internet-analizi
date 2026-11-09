@@ -34,3 +34,15 @@ The population script handles the extra `Ay` header in the supplied annual expor
 - Latency labels (<50, 50–99.9, ≥100 ms) are simplified project guidance, not an official mobile quality standard. Packet loss and jitter are not evaluated.
 
 This is an educational data analysis prototype, not an operator recommendation service. No blanket software licence is granted over third-party data.
+
+## API and PWA
+
+The hosted version now serves the existing dataset through a read-only API:
+
+- `GET /api/meta`: districts, periods and dataset metadata.
+- `GET /api/records`: records, optionally filtered by `district` and `period`.
+- `GET /api/compare?districtA=Ataşehir&districtB=Kadıköy&period=2026-Q3`: validated two-district comparison.
+
+This API does not connect to BTK or collect live measurements. The front end uses the API online and the prepared local dataset when offline. The service worker caches the application shell and dataset after installation; API query responses are not cached separately. The manifest and PNG icons support browser installation where available.
+
+Build: `python3 scripts/build-worker.py` then `bash scripts/build.sh`. The generated Worker embeds the data and all required assets. Local Live Server remains supported using the JSON fallback; API requests need the hosted Worker runtime.
