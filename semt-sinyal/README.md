@@ -1,5 +1,7 @@
 # Semt Sinyal
 
+[Open the live application](https://semt-sinyal.vercel.app/)
+
 A Turkish-language web prototype comparing mobile internet results and population across İstanbul’s 39 districts. Built with HTML, CSS, JavaScript and Python data preparation scripts.
 
 ## Features
@@ -28,7 +30,7 @@ The population script handles the extra `Ay` header in the supplied annual expor
 
 - Mobile metrics: the accompanying Power BI project’s district–quarter export, derived from [Speedtest by Ookla Open Data](https://github.com/teamookla/ookla-open-data). See the parent project’s methodology. Derived mobile data remains subject to [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 - Population: TÜİK 2025 via [İTO Veri İstanbul](https://veriistanbul.ito.org.tr/view/kategori/veri.php?Guid=89c6a94b-181a-46ea-a62a-c404ebfe8272). Population reference year remains 2025 for all selected internet quarters. The source workbook is obtained separately for refreshes.
-- The 273 records cover 39 districts and seven quarters. Data is static, not a live API.
+- The 273 records cover 39 districts and seven quarters. The API serves a static dataset; it does not collect live measurements.
 - No operator-specific, building-level, cell-site or direct signal-strength data is available.
 - Test counts are not subscriber or population counts. District aggregates do not guarantee performance at a specific home.
 - Latency labels (<50, 50–99.9, ≥100 ms) are simplified project guidance, not an official mobile quality standard. Packet loss and jitter are not evaluated.
@@ -46,3 +48,7 @@ The hosted version now serves the existing dataset through a read-only API:
 This API does not connect to BTK or collect live measurements. The front end uses the API online and the prepared local dataset when offline. The service worker caches the application shell and dataset after installation; API query responses are not cached separately. The manifest and PNG icons support browser installation where available.
 
 Build: `python3 scripts/build-worker.py` then `bash scripts/build.sh`. The generated Worker embeds the data and all required assets. Local Live Server remains supported using the JSON fallback; API requests need the hosted Worker runtime.
+
+## Vercel deployment
+
+Use `semt-sinyal` as the project root. The included `vercel.json` runs `node scripts/build-vercel.mjs`, prepares the `public` directory and bundles the read-only API functions. The production application is available at https://semt-sinyal.vercel.app/.
