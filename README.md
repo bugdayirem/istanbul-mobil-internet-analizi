@@ -36,4 +36,4 @@ Bu proje bağımsız bir öğrenci çalışmasıdır.
 
 İki ilçenin internet sonuçlarını, 2025 nüfuslarını ve açıklamalı karşılaştırmayı telefon görünümünde inceleyen web prototipi eklendi. [Uygulama dosyaları ve çalıştırma yönergeleri](semt-sinyal/README.md).
 
-[Semt Sinyal canlı uygulamasını aç](https://semt-sinyal-karsilastirma.wry-lake-0658.chatgpt.site)
+[Semt Sinyal canlı uygulamasını aç](https://semt-sinyal.vercel.app)
