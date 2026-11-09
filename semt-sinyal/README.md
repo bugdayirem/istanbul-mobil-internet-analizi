@@ -1,6 +1,10 @@
 # Semt Sinyal
 
-[Open the live application](https://semt-sinyal.vercel.app/)
+[Open the live application](https://semt-sinyal.vercel.app/) · [HTML source](index.html) · [Download QR code](../assets/semt-sinyal-qr.png)
+
+<a href="https://semt-sinyal.vercel.app/"><img src="../assets/semt-sinyal-qr.png" alt="Scan to open Semt Sinyal" width="220"></a>
+
+No sign-in is required. Scan the QR code with your phone camera, or open the live link. In a supported browser, add the app to the home screen.
 
 A Turkish-language web prototype comparing mobile internet results and population across İstanbul’s 39 districts. Built with HTML, CSS, JavaScript and Python data preparation scripts.
 
