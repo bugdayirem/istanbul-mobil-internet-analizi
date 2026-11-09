@@ -1,13 +1,5 @@
 # İstanbul’da Mobil İnternet Performansı ve Semt Sinyal
 
-**[Canlı uygulamayı aç — Semt Sinyal](https://semt-sinyal.vercel.app/)** · [HTML kaynak kodu](semt-sinyal/index.html) · [Uygulama dokümantasyonu](semt-sinyal/README.md)
-
-İstanbul’un iki ilçesini seçerek indirme/yükleme hızlarını, gecikmeyi, test sayılarını ve 2025 nüfuslarını karşılaştırın. Mobil cihazlarda desteklenen tarayıcılardan ana ekrana eklenebilir.
-
-<a href="https://semt-sinyal.vercel.app/"><img src="assets/semt-sinyal-qr.png" alt="Semt Sinyal canlı uygulaması QR kodu" width="220"></a>
-
-Telefon kamerasıyla QR kodunu okutun veya [QR görselini indirin](assets/semt-sinyal-qr.png). Giriş gerektirmez.
-
 ![İstanbul mobil internet performansı raporu](assets/rapor_onizleme.png)
 
 [PDF raporunu görüntüle](istanbul_mobil_internet_analizi.pdf) · [Power BI dosyasını indir](istanbul_mobil_internet_analizi.pbix)
@@ -42,6 +34,14 @@ Power BI ile İstanbul’un 39 ilçesinde mobil internet performansının ilçe,
 Bu proje bağımsız bir öğrenci çalışmasıdır.
 
 ## Semt Sinyal web uygulaması
+
+**[Canlı uygulamayı aç — Semt Sinyal](https://semt-sinyal.vercel.app/)** · [HTML kaynak kodu](semt-sinyal/index.html) · [Uygulama dokümantasyonu](semt-sinyal/README.md)
+
+İstanbul’un iki ilçesini seçerek indirme/yükleme hızlarını, gecikmeyi, test sayılarını ve 2025 nüfuslarını karşılaştırın. Mobil cihazlarda desteklenen tarayıcılardan ana ekrana eklenebilir.
+
+<a href="https://semt-sinyal.vercel.app/"><img src="assets/semt-sinyal-qr.png" alt="Semt Sinyal canlı uygulaması QR kodu" width="220"></a>
+
+Telefon kamerasıyla QR kodunu okutun veya [QR görselini indirin](assets/semt-sinyal-qr.png). Giriş gerektirmez.
 
 İki ilçenin internet sonuçlarını, 2025 nüfuslarını ve açıklamalı karşılaştırmayı telefon görünümünde inceleyen çalışan web prototipi. HTML, CSS, JavaScript ve Python ile hazırlanmıştır. Sunucu tarafındaki salt okunur API mevcut veri setini sunar; BTK bağlantısı veya canlı ölçüm içermez. PWA, ilk başarılı yüklemeden sonra saklanan veriyle çevrimdışı karşılaştırmayı destekler. [Uygulama dosyaları ve çalıştırma yönergeleri](semt-sinyal/README.md).
 
